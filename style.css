@@ -65,7 +65,21 @@ body {
 }
 
 
+.rekomendasi{
+  padding: 10px 20px 40px;
+}
 
+.rekomendasi h2{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight:700;
+  font-size:20px;
+  margin-bottom:20px;
+  color:#e10600;
+}
+
+.rekomendasi-container{
+  width:100%;
+}
 
 
 .produk {
@@ -160,7 +174,7 @@ body {
 
 
 .produk-arrow {
-  font-size: 18px;
+  font-size: 20px;
   color: #e10600;
   font-weight: bold;
 }
@@ -169,56 +183,62 @@ body {
 
 
 
-.rekomendasi {
-  padding: 30px 20px;
+.slider{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid #eeeeee;
+  box-shadow:0 1px 10px rgba(0,0,0,0.05);
+  background:#000;
 }
 
-.rekomendasi h2 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #e10600;
+.slides{
+  display:flex;
+  height:100%;
+  transition: transform .6s ease;
 }
 
-.rekomendasi-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+.slide{
+  min-width:100%;
+  height:100%;
 }
 
-.rekomendasi-card {
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
+.slide.active{
+  opacity:1;
+  z-index:2;
 }
 
-.rekomendasi-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit: contain;
+  display:block;
 }
 
-
-
-
-
-.rekom-btn {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background: #e50914;
-  color: white;
-  padding: 8px 14px;
-  font-size: 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s ease;
+.slider-dots{
+  position:absolute;
+  bottom:15px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:8px;
+  z-index:5;
 }
 
-.rekom-btn:hover {
-  background: #b20710;
+.slider-dots span{
+  width:8px;
+  height:8px;
+  background:rgba(255,255,255,0.5);
+  border-radius:50%;
+  cursor:pointer;
+  transition:all .3s ease;
+}
+
+.slider-dots span.active{
+  background:#fff;
+  transform:scale(1.2);
 }
 
 
@@ -421,7 +441,6 @@ body {
   width: 100%;
   background: #f4f0f0;
   padding: 25px 30px 40px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   transform: translateY(-100%);
   transition: transform 0.35s ease;
   z-index: 2000;

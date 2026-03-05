@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Burger Shop</title>
+  
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <link rel="manifest" href="/site.webmanifest">
 
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -53,18 +62,16 @@
 <!-- REKOMENDASI -->
 <section class="rekomendasi">
 
-  <h2>Populer</h2>
+  <h2>Rekomendasi</h2>
 
   <div class="rekomendasi-container">
 
-    <div class="rekomendasi-card">
-      <img src="assets/rekom1.jpg" alt="Rekomendasi 1">
-      <a href="https://www.facebook.com/TheOnlyZiz" class="rekom-btn">Pesan Sekarang</a>
-    </div>
+    <div class="slider">
 
-    <div class="rekomendasi-card">
-      <img src="assets/rekom2.jpg" alt="Rekomendasi 2">
-      <a href="https://www.facebook.com/TheOnlyZiz" class="rekom-btn">Pesan Sekarang</a>
+      <div class="slides" id="slides"></div>
+
+      <div class="slider-dots" id="sliderDots"></div>
+
     </div>
 
   </div>
@@ -230,41 +237,7 @@
 
 </footer>
 
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function(){
-
-  document.body.style.opacity = "0";
-
-  setTimeout(()=>{
-    document.body.style.transition = "opacity 0.5s ease";
-    document.body.style.opacity = "1";
-  },100);
-
-  const toggle = document.getElementById("menuToggle");
-  const menu = document.getElementById("navMenu");
-  const overlay = document.getElementById("navOverlay");
-  const closeBtn = document.getElementById("closeMenu");
-
-  toggle.addEventListener("click", function(){
-    menu.classList.add("active");
-    overlay.classList.add("active");
-  });
-
-  closeBtn.addEventListener("click", function(){
-    menu.classList.remove("active");
-    overlay.classList.remove("active");
-  });
-
-  overlay.addEventListener("click", function(){
-    menu.classList.remove("active");
-    overlay.classList.remove("active");
-  });
-
-});
-
-</script>
+    <script src="script.js"></script>
 
 </body>
 </html>
