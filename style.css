@@ -274,10 +274,13 @@ body {
 
 
 
-footer {
-  background: #000;
-  color: white;
-  padding: 40px 24px;
+.footer {
+  background-color: #0f0b0b;
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+
+  min-height: 60vh;
 }
 
 .footer-content h3 {
@@ -368,7 +371,7 @@ footer {
 }
 
 .footer-bottom {
-  margin-top: 40px;
+  margin-top: 0px;
   padding-top: 20px;
   font-size: 15px;
   color: #cccccc;
